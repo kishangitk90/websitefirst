@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVENTURE</title>
+    <!-- ****** CSS ****** -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- bootstrap javascript link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- fontawesome css -->
+    <script src="https://kit.fontawesome.com/4a3b047fe4.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background:linear-gradient(orange,white,green);
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./img/grouptrack.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.head{
+    padding-top: 30rem;
+}
+
+.btn1{
+    /* border:2px solid black; */
+    background-color: white;
+    color: black;
+    /* margin:2px; */
+    text-decoration: none; 
+    margin-left: 38rem;
+    margin-top: 10px;
+}
+
+.btn2{
+    /* border:2px solid black; */
+    background-color: white;
+    color: black;
+    /* margin:2px; */ 
+    text-decoration: none; 
+    margin-left: 200px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.line {
+    width: 20rem;
+    height: 4px;
+    background: crimson;
+    margin: 10px auto;
+}
+.car{
+    transform: translateX(25%);
+}
+.event {
+    width: 500px;
+    height: 350px;
+    
+}
+
+.event .row {
+    margin-top: 50%;
+}
+
+.row .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row .col-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*  margin: 10px; */
+    flex-wrap: wrap;
+}
+.photo1{
+    height: 250px;
+    width: 180px;
+    margin: 2px;
+    border-radius: 6px;
+}
+
+.region{
+    height: 490px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 6px;
+}
+.region1{
+    height: 240px;
+    width: 180px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.state{
+    height: 250px;
+    width: 180px;
+    margin: 2px;
+    border-radius: 6px;
+}
+
+.trip {
+    height: 180px;
+    width: 250px;
+    margin: 5px;
+    box-shadow: 3px 3px 3px 3px gray;
+    background-color:blanchedalmond ;
+
+
+}
+
+.photo {
+    display: flex;
+    height: 200px;
+    width: 250px;
+    padding: 0%;
+    margin: 0%;
+}
+
+.img {
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+}
+
+.memories-para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.icon{
+    height: 50px;
+    width: 50px;
+    margin: .5px;
+    border-radius: 14px;
+    background-position: center;
+}
+
+.overflow{
+    /* background-image: url(smale3.jpg); */
+  
+    height: 470px;
+    width: 400px;
+    margin-top: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    text-decoration: none;
+    
+}
+
+.card{
+    
+    box-shadow: 0 25px 40px rgba(84, 75, 75, 0.2); 
+    backdrop-filter: blur(50px); 
+    
+}
+.text-light{
+    text-decoration: dashed;
+    text-decoration-style: dashed;
+    
+}
+
+/* @media screen and (min-width:1024px){
+    body{
+        background-color: red;
+    }   
+   }
+
+   @media screen and (min-width:768px)and (max-width:1023px){
+    body{
+        background-color: rgb(55, 0, 255);
+    }   
+   }
+
+   @media screen and (min-width:0px) and (max-width:767px){
+    body{
+        background-color: rgb(0, 255, 8);
+    }   
+   } */
+
+    </style>
+
+
+
+</head> 
+
+<body>  
+    <!-- ********************* navbar **************** -->
+    <div class="container-fluid bg-dark">
+        <div class="container">
+            <nav class="navbar bg-dark navbar-expand-lg navbars">
+                <h1 class="nav-brand text-light"> ADVENTURE</h1>
+                <ul class="navbar-nav nav-menu ms-auto">
+                    <li class="nav-item"><a class="nav-link text-light" href="#">HOME </a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#">TOURS</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#">EXPLORE</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="/About.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="/contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- *************** hero *********** -->
+
+    <section class="header">
+        <div class="container-fluid hero">
+            <div class="container">
+                <h2 class=" head text-center text-white">EXPLORE THE COLORFULL WORLD</h2>
+                <div class="line"></div>
+                <h1 class="head1 text-center text-white">WONDERFULL GIFT</h1>
+                <a href="/learnmore.html" class="btn btn-primary btn1 ">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- event -->
+    <section>
+        <div class="container-fluid m-10">
+            <div class="container">
+                <div class="title text-center mt-5">
+                    <h1>UPCOMING EVENTS</h1>
+                </div>
+                <div class="line"></div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <div class="card car">
+                            <div class="card-img">
+                                <img class="event" src="./img/jeep.jpg" alt="">                                
+                            </div>
+                            <div class="card-title text-center">
+                                <h2 class="jung text-center ">JUNGLE ROAD TRIP</h2>
+                            </div>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, unde</p>
+                                <a href="" class=" btn btn-primary btn2">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-img">
+                                 <img class="event" src="./img/parashut.jpg" alt="">
+                            </div>
+                            <div class="card-title text-center">
+                                <h2>AIR GLIDING TRIP</h2>
+                            </div>
+                            <div class="card-text btn-center">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipi sicing elit. Error, unde!</p>
+                                <a href="" class=" btn btn-primary btn2">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- destination by relagion -->
+    <section>
+        <div class="container-fluid mb-2">
+            <div class="container">
+                <div class="row">
+                    <div class="card-title text-center mb-2 mt-2">
+                        <h1>explore Top Destination by Region</h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card ">
+                            <div class="card-body">
+                                <div class="card-img">
+                                    <a href=""><img class="region" src="./img/taj-mahal.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="img">
+                                                <img class="region1" src="./img/india-in-pictures-beautiful-places-to-photograph-amer-fort-jaipur.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="img">
+                                                <img class="region1" src="./img/india-in-pictures-beautiful-places-to-photograph-bada-bagh-jaisalmer.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="img">
+                                                <img class="region1" src="./img/india-in-pictures-beautiful-places-to-photograph-bandra-worli-sea-link-mumbai.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="img">
+                                                <img class="region1" src="./img/india-in-pictures-beautiful-places-to-photograph-bhagwan-mahavir-wildlife-sanctuary.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="img">
+                                                <img class="region1" src="./img/india-in-pictures-beautiful-places-to-photograph-cola-beach-goa.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="img">
+                                                <img class="region1" src="./img/india-in-pictures-beautiful-places-to-photograph-darjeeling-west-bengal.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- 2nd section -->
+
+    <section>
+        <div class="container-fluid mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 memories-para">
+                        <div class="card  ">
+                            <div class="card-body">
+                                <div class="card-text text-center">
+                                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Maiores asperiores impedit, sed, esse eius quidem voluptates obcaecati sit autem
+                                        maxime, ad ipsum iusto voluptate ipsa in voluptas qui delectus. Eaque.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card-title text-center mb-2">
+                                    <h1>MEAMORIES</h1>
+                                </div>
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="img">
+                                                <img class="photo" src="./img/india-in-pictures-beautiful-places-to-photograph-ellora-caves.jpg
+                                                " alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="img">
+                                                <img class="photo" src="./img/india-in-pictures-beautiful-places-to-photograph-gateway-of-india-mumbai.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-6">
+                                            <div class="img">
+                                                <img class="photo" src="./img/india-in-pictures-beautiful-places-to-photograph-golden-temple-amritsar.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="img">
+                                                <img class="photo" src="./img/india-in-pictures-beautiful-places-to-photograph-jahangiri-palace-agra.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- treanding place -->
+
+    <section>
+        <div class="container-fluid mt-2">
+            <div class="container">
+                <div class="title text-center mb-2">
+                    <h1>TREANDING PLACESES</h1>
+                    <div class="line"></div>
+                </div>
+                <marquee direction="left" scrollamount="5" behavior="alternate" onmouseover="this.stop()" onmouseout="this.start()">
+
+                    <div class="row mb-5 mt-5 ">
+                        <div class="col-lg-2 ">
+                            <a href=""><img class="state" src="./img/taj-mahal.jpg" alt=""></a>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <a href=""><img class="state" src="./img/aurangabad.jpg" alt=""></a>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <a href=""><img class="state" src="./img/tamil.jpg" alt=""></a>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <a href=""><img class="state" src="./img/india-in-pictures-beautiful-places-to-photograph-meenakshi-amman-temple.jpg" alt=""></a>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <a href=""><img class="state" src="./img/india-in-pictures-beautiful-places-to-photograph-gateway-of-india-mumbai.jpg" alt=""></a>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <a href=""><img class="state" src="./img/Discover-Kerala-Tour.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </marquee>
+                <marquee direction="left" scrollamount="5" behavior="alternate" onmouseover="this.stop()" onmouseout="this.start()">
+                <div class="row mb-5">
+                    <div class="col-lg-2 ">
+                        <a href=""><img class="state" src="./img/india-in-pictures-beautiful-places-to-photograph-red-fort-delhi.jpg" alt=""></a>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <a href=""><img class="state" src="./img/india-in-pictures-beautiful-places-to-photograph-jahangiri-palace-agra.jpg" alt=""></a>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <a href=""><img class="state" src="./img/india-in-pictures-beautiful-places-to-photograph-mehrangarh-fort.jpg" alt=""></a>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <a href=""><img class="state" src="./img/india-in-pictures-beautiful-places-to-photograph-meenakshi-amman-temple.jpg" alt=""></a>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <a href=""><img class="state" src="./img/india-in-pictures-beautiful-places-to-photograph-qutub-minar.jpg" alt=""></a>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <a href=""><img class="state" src="./img/india-in-pictures-beautiful-places-to-photograph-jahangiri-palace-agra.jpg" alt=""></a>
+                    </div>
+                </div>
+            </marquee>
+            </div>
+        </div>
+    </section>
+
+    <!--traveling partners -->
+
+    <section>
+        <div class="container-fluid mt-5">
+            <div class="container">
+                <div class="title text-center mb-2">
+                    <h1>TRAVALING PARTNERS</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="row mb-10 mt-5 ">
+                    <div class="col-lg-3 ">
+                        <a href=""><img class="trip" src="./img/tour1.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <a href=""><img class="trip" src="./img/travel1.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <a href=""><img class="trip" src="./img/tour11.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href=""><img class="trip" src="./img/travel1.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-lg-3 ">
+                        <a href=""><img class="trip" src="./img/triptravel-removebg-preview.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <a href=""><img class="trip" src="./img/venkateswara-travels-removebg-preview (1).png" alt=""></a>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <a href=""><img class="trip" src="./img/1-2-removebg-preview.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href=""><img class="trip" src="./img/travelguru-removebg-preview.png" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ************ footer *********** -->
+
+    <section>
+        <div class="container-fluid bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 overflow ">
+                        <div class="">
+                            <h3 class="text-light mt-3">Useful Link</h3>
+                            <ul>
+                                <li><a href="">Prtner With Us</a></li>
+                                <li><a href="">Meet Our Team</a></li>
+                                <li><a href="">Refund Policy</a></li>
+                                <li><a href="">Term & Condition</a></li>
+                                <li><a href="">Privacy policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <ul>
+                            <h3 class="text-light mt-3">Useful Link</h3>
+                            <li><a href="">Prtner With Us</a></li>
+                            <li><a href="">Meet Our Team</a></li>
+                            <li><a href="">Refund Policy</a></li>
+                            <li><a href="">Term & Condition</a></li>
+                            <li><a href="">Privacy policy</a></li>
+                        </ul> 
+                    </div>
+                    <div class="col-lg-3">
+                        <ul>
+                        <h3 class="text-light mt-3 ">INFORMATION</h3>
+                        <li><a href="">Contact us</a></li>
+                        <li><a href="">Supports Center</a></li>̥
+                        <li><a href="">FAQ's</a></li>
+                        <li><a href="">Blogs</a></li>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Disclaimer</a></li>
+                        <li><a href="">Share Your Travel Experience</a></li>
+                        <li><a href="">We Are Hiring</a></li>
+                    </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <ul>
+                        <h3 class="text-light mt-3">SERVICES</h3>
+                        <li><a href="">Vehicle Facality</a></li>
+                        <li><a href="">Room's & Hotels</a></li>
+                        <li><a href="">Flights</a></li>
+                        <li><a href="">Tour & Travels</a></li>
+                        <li><a href="">Package Tour</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="line"></div>
+                    <div class="col-lg-3">
+                        <h6 class="text-light">copyright@2023, Adventure Pvt.Ltd</h6>
+                    </div>
+                    <div class="col-lg-3">
+                        <h6 class="text-light">1234567890,0987654321</h6>
+                    </div>
+                    <div class="col-lg-3">
+                        <h6 class="text-light">First lane B-no 255 nagpur 440008</h6>
+                    </div>
+                    <div class="col-lg-3">
+                        <h6 class="text-light">adventure@gmail.com</h6>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h6 class="text-light">copyright@2023, Adventure Pvt.Ltd</h6>
+                    </div>
+                    <div class="col-lg-3">
+                        <h6 class="text-light"></h6>
+                    </div>
+                    <div class="col-lg-3">
+                        <h6 class="text-light">+91-908-7654321 -(35-hunting line's are available)</h6>
+                    </div>
+                    <div class="col-lg-3">
+                        <h6 class="text-light">AdventureNagpur</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- js -->
+
+
+</body>
+
+</html>
